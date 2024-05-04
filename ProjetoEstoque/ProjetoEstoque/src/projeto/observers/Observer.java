@@ -1,5 +1,5 @@
 package projeto.observers;
 
-public class Observer {
-    
+public interface Observer {
+    void notificar(double valorTotal);
 }
