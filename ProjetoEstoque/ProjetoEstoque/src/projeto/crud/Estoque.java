@@ -61,7 +61,8 @@ public class Estoque {
 
     private void notificarObservers() {
         double valorTotal = calcularValorTotal();
-        if (valorTotal >= 1000) {
+        if (valorTotal >= 1000 && !notificado) {
+            notificado = true;
             for (Observer observer : observers) {
                 observer.notificar(valorTotal);
             }
